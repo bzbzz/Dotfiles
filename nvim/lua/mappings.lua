@@ -29,8 +29,8 @@ map("n", "<leader>fm", ":Prettier<Cr>", { noremap = true, silent = true }) -- Fo
 -- normal mode
 map("n", "<Up>", "10<C-w>>", { noremap = true, silent = true }) -- Instead, decrease split's size
 map("n", "<Down>", "10<C-w><", { noremap = true, silent = true }) -- Instead, increase split's size
-map("n", "<Left>", "<Nop>", { noremap = true, silent = true }) 
-map("n", "<Right>", "<Nop>", { noremap = true, silent = true }) 
+map("n", "<Left>", "<Nop>", { noremap = true, silent = true })
+map("n", "<Right>", "<Nop>", { noremap = true, silent = true })
 -- visual mode
 map("v", "<Up>", "<Nop>", { noremap = true, silent = true })
 map("v", "<Down>", "<Nop>", { noremap = true, silent = true })
