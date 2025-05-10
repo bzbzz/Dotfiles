@@ -6,8 +6,8 @@ local map = vim.keymap.set
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "kk", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "kk" to ESC in insert mode
-map("i", "jj", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "jj" to ESC in insert mode
-map("i", "hh", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "hh" to ESC in insert mode
+-- map("i", "jj", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "jj" to ESC in insert mode
+-- map("i", "hh", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "hh" to ESC in insert mode
 -- map("i", "ll", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" }) -- map "ll" to ESC in insert mode
 map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true, desc = "Scroll down and center" }) -- scroll down and center
 map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true, desc = "Scroll down and center" }) -- scroll down and center
