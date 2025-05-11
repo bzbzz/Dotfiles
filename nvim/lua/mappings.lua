@@ -18,7 +18,7 @@ map("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true }) -- move lin
 map("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true }) -- move line down(n)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true }) -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true }) -- move line down(v)
-map("n", "<A-w>", ":bd<Cr>", { noremap = true, silent = true }) -- close buffer
+map("n", "<A-w>", ":bd!<Cr>", { noremap = true, silent = true }) -- close buffer
 map("n", "<leader>co", ":CopilotChat<Cr>", { noremap = true, silent = true }) -- Open Copilot chat
 map("n", "<leader>cs", ":Copilot status<Cr>", { noremap = true, silent = true }) -- Show Copilot status / activate
 map("n", "<leader>ce", ":Copilot enable<Cr>", { noremap = true, silent = true }) -- Enable Copilot
