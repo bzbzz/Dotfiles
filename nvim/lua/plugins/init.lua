@@ -53,12 +53,14 @@ return {
                 }
             },
             -- context = "buffer", -- This enables the buffer as context for every request
-
+            context = "buffers", -- This enables all buffers as context for every request
+            -- context = "files", -- This enables all files as context for every request
             chat_autocomplete = true,
         },
 
         cmd = "CopilotChat",
     },
+
     -- {
     -- 	"nvim-treesitter/nvim-treesitter",
     -- 	opts = {
