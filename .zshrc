@@ -83,6 +83,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-completions
   z
+  fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,17 +116,41 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Aliases
 alias dot='cd ~/dot && nvim'
 alias ls='eza'
+alias vim='nvim'
 
-# Solves pressing delete adds a space instead of del when using kitty over ssh
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# Shell integrations
 eval $(thefuck --alias)
+eval "$(fzf --zsh)"
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Keybindings
 
 bindkey '^y' autosuggest-accept
+
+# History
+
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Solves pressing delete adds a space instead of del when using kitty over ssh
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

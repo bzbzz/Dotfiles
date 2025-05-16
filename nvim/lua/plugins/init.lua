@@ -61,6 +61,12 @@ return {
         cmd = "CopilotChat",
     },
 
+    {
+        "sphamba/smear-cursor.nvim",
+        event = "VimEnter",
+        opts = {},
+    },
+
     -- {
     -- 	"nvim-treesitter/nvim-treesitter",
     -- 	opts = {
