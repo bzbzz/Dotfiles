@@ -55,6 +55,7 @@ return {
             -- context = "buffer", -- This enables the buffer as context for every request
             context = "buffers", -- This enables all buffers as context for every request
             -- context = "files", -- This enables all files as context for every request
+            model = 'claude-3.7-sonnet',
             chat_autocomplete = true,
         },
 
