@@ -119,8 +119,10 @@ fi
 
 # Aliases
 alias dot='cd ~/dot && nvim'
+alias vau='cd ~/Vault/Vault/ && nvim 00\ -\ Maps\ of\ content/ToDo.md'
 alias ls='eza'
 alias vim='nvim'
+alias cat='bat'
 
 # Shell integrations
 eval $(thefuck --alias)
