@@ -41,10 +41,14 @@ vim.api.nvim_create_autocmd("UILeave", {
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
+dofile(vim.g.base46_cache .. "render-markdown")
 
 require "options"
 require "nvchad.autocmds"
-require("discipline").cowboy()
+vim.notify = require("notify") -- Make nvim.notify the default notifier
+-- requiring my own little add-ons
+require("discipline").cowboy() -- based on craftzdog, hjkl bw are limited
+require("macroNotify").setup() -- notify when recording macros
 
 vim.schedule(function()
         require "mappings"

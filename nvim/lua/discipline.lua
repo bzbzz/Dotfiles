@@ -1,8 +1,7 @@
 local M = {}
 
 function M.cowboy()
-	local ok = true
-	for _, key in ipairs({ "h", "j", "k", "l", "+", "-", "w", "b"}) do
+	for _, key in ipairs({ "h", "j", "k", "l", "+", "-", "w", "b" }) do
 		local count = 0
 		local timer = assert(vim.uv.new_timer())
 		local map = key
@@ -10,20 +9,19 @@ function M.cowboy()
 			if vim.v.count > 0 then
 				count = 0
 			end
-			if count >= 15 and vim.bo.buftype ~= "nofile" then
-        			ok = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
-					icon = "🤠",
-					id = "cowboy",
-					keep = function()
-						return count >= 10
-					end,
-				})
-				if not ok then
-					return map
-				end
+			if count >= 10 and vim.bo.buftype ~= "nofile" then
+				vim.schedule(function()
+					vim.notify("Hold it Cowboy!", vim.log.levels.WARN, {
+						icon = "🤠",
+						id = "cowboy",
+						keep = function()
+							return count >= 10
+						end,
+					})
+				end)
 			else
 				count = count + 1
-				timer:start(2000, 0, function()
+				timer:start(1000, 0, function()
 					count = 0
 				end)
 				return map
