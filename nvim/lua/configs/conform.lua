@@ -1,6 +1,7 @@
 local options = {
 	formatters_by_ft = {
 		lua = { "stylua" },
+		c = { "clang-format" },
 		css = { "prettier" },
 		html = { "prettier" },
 		ts = { "prettier" },
@@ -8,6 +9,7 @@ local options = {
 		js = { "prettier" },
 		jsx = { "prettier" },
 		php = { "php-cs-fixer" },
+		python = { "black" },
 	},
 
 	-- format_on_save = {

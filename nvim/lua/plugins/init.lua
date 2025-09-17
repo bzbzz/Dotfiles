@@ -14,27 +14,15 @@ return {
 	},
 
 	{
-		"ThePrimeagen/vim-be-good",
-		cmd = "VimBeGood",
-	},
-
-	{
 		"github/copilot.vim",
 		cmd = "Copilot",
 	},
 
 	{
 		"junegunn/fzf.vim",
-		dependencies = {
-			"junegunn/fzf",
-		},
+		dependencies = { "junegunn/fzf" },
 		lazy = false,
 	},
-
-	-- {
-	--     "prettier/vim-prettier",
-	--     cmd = "Prettier",
-	-- },
 
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
@@ -42,22 +30,7 @@ return {
 			{ "github/copilot.vim" },
 			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
-		opts = {
-			mappings = {
-				complete = {
-					insert = "<Tab>",
-				},
-				reset = {
-					normal = "<C-r>",
-					insert = "<C-r>",
-				},
-			},
-			-- context = "buffer", -- This enables the buffer as context for every request
-			context = "buffers", -- This enables all buffers as context for every request
-			-- context = "files", -- This enables all files as context for every request
-			model = "claude-3.7-sonnet",
-			chat_autocomplete = true,
-		},
+		opts = require("configs.copilotChat"),
 
 		cmd = "CopilotChat",
 	},
@@ -70,30 +43,19 @@ return {
 
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
-		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-		---@module 'render-markdown'
-		---@type render.md.UserConfig
-		opts = {
-			heading = { sign = false, position = "inline" },
-			code = { sign = false },
-		},
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+		opts = require("configs.render-markdown"),
 		lazy = false,
 	},
 
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		---@type Flash.Config
 		opts = {},
         -- stylua: ignore
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
             { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-            -- { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-            -- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-            -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
         },
 	},
 
@@ -118,13 +80,4 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	opts = {
-	-- 		ensure_installed = {
-	-- 			"vim", "lua", "vimdoc",
-	--      "html", "css"
-	-- 		},
-	-- 	},
-	-- },
 }
