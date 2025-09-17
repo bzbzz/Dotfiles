@@ -1,0 +1,24 @@
+/* Gives more space to the text in editor mode and centers it */
+.markdown-source-view,
+.markdown-preview-view {
+    max-width: 80vw;
+    margin: auto; 
+}
+
+/** Mobile fix **/
+.is-mobile .markdown-source-view,
+.is-mobile .markdown-preview-view {
+    max-width: 95vw;
+    margin: auto; 
+}
+
+/* Hides the scrollbar */
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.external-link {
+    background-image: none;
+    padding-right: 0px;
+}

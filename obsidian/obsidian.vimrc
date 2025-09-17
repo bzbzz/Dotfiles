@@ -7,6 +7,7 @@ unmap <Space>
 noremap j gj
 noremap k gk
 
+" TODO: need to fix the pasting to also include c-c
 noremap <Space>p "0p
 
 inoremap <C-h> <Left>

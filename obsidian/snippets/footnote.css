@@ -1,0 +1,4 @@
+/* Make the backlinks in the footnote min height smaller */
+.embedded-backlinks {
+    min-height: 100px !important;
+}
