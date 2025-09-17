@@ -1,0 +1,1 @@
+/home/bzbzz/obs/Vault/99 - Meta/obsidian.vimrc
