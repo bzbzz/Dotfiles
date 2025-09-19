@@ -25,14 +25,16 @@ That's it! The styling will automatically apply.
 */
 
 :root {
-    /* ================================ Colors ================================ */
+    /* ================================ Dark rainbow ================================ */
+
+    /* ================================ Gruvbox ================================ */
     --red: #cc241d; /* Gruvbox Red */
     --orange: #d65d0e; /* Gruvbox Orange */
     --yellow: #d79921; /* Gruvbox Yellow */
     --green: #98971a; /* Gruvbox Green */
     --blue: #458588; /* Gruvbox Blue */
     --purple: #8f3f71; /* Gruvbox Purple */
-    --pink: #b16286;
+    --pink: #b16286; 
     --light-gray: #665c54; /* Gruvbox Gray/Brown */
     --normal-gray: #504945; /* Gruvbox Dark Gray */
     --darker-gray: #3c3836; /* Gruvbox Darker Gray */

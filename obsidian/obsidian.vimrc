@@ -35,6 +35,10 @@ nmap <C-,> :toggleRightSideBar<CR>
 exmap openGraph obcommand graph:open
 nmap <Space>og :openGraph<CR>
 
+" Toggle spell check
+exmap toggleSpellcheck obcommand editor:toggle-spellcheck
+nmap <Space>sc :toggleSpellcheck<CR>
+ 
 " Open file explorer
 exmap telescope obcommand switcher:open
 nmap <Space>ff :telescope<CR>
