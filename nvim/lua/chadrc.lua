@@ -38,9 +38,9 @@ M.nvdash = {
 
 	buttons = {
 		{ txt = "To realize that all your life - you know, all your love, all your hate, all your", no_gap = true },
-		{ txt = "memories, all your pain - it was all the same thing. It was all the same dream,", no_gap = true },
-		{ txt = "a dream that you had inside a locked room, a dream about being a person.", no_gap = true },
-		{ txt = "And like a lot of dreams, there's a monster at the end of it.", no_gap = true },
+		{ txt = " memories, all your pain - it was all the same thing. It was all the same dream,", no_gap = true },
+		{ txt = "    a dream that you had inside a locked room, a dream about being a person.", no_gap = true },
+		-- { txt = "         And like a lot of dreams, there's a monster at the end of it.", no_gap = true },
 		-- Plugin loading time
 		-- { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 		--

@@ -1,9 +1,9 @@
 return {
 	model = "claude-3.7-sonnet",
 	temperature = 0.1, -- Lower = focused, higher = creative
-	context = "buffers", -- This enables all buffers as context for every request
+	sticky = { "#buffers:visible" },
 
-    chat_autocomplete = true,
+	chat_autocomplete = true,
 
 	mappings = {
 		complete = {},
