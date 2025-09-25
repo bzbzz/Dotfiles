@@ -8,6 +8,7 @@ local options = {
 		tsx = { "prettier" },
 		js = { "prettier" },
 		jsx = { "prettier" },
+        json = { "prettier" },
 		php = { "php-cs-fixer" },
 		python = { "black" },
 	},

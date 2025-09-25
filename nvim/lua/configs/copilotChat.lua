@@ -1,12 +1,14 @@
 return {
-	model = "claude-3.7-sonnet",
+	model = "claude-sonnet-4",
 	temperature = 0.1, -- Lower = focused, higher = creative
-	sticky = { "#buffers:visible" },
+	sticky = { "#buffers" },
 
-	chat_autocomplete = true,
 
 	mappings = {
-		complete = {},
+		complete = {
+			normal = "<C-q>",
+			insert = "<C-q>",
+        },
 		reset = {
 			normal = "<C-a>",
 			insert = "<C-a>",
@@ -21,7 +23,7 @@ return {
 
 	headers = {
 		user = "bzbzz",
-		assistant = "Cop",
+		assistant = "cop", -- Icon of copilot
 		tool = "🔧 Tool",
 	},
 

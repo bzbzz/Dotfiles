@@ -17,5 +17,7 @@ return {
 
 	code = {
 		sign = false,
+		style = "normal",
+		left_pad = 2,
 	},
 }
