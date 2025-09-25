@@ -22,3 +22,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
     background-image: none;
     padding-right: 0px;
 }
+
+/* Hide the three dots after a folded heading */
+.cm-foldPlaceholder {
+    display: none;
+}

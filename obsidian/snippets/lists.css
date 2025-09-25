@@ -1,0 +1,12 @@
+/* Change bullet points to dashes in Obsidian - Working Solution */
+/* Credit: dawni on Obsidian Forum (June 2025) */
+
+.list-bullet::after {
+    display: none;
+}
+
+.is-live-preview .list-bullet,
+.markdown-reading-view ul.has-list-bullet li::marker {
+    color: var(--list-marker-color);
+    content: "- ";
+}

@@ -10,10 +10,11 @@ noremap k gk
 " TODO: need to fix the pasting to also include c-c
 noremap <Space>p "0p
 
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-l> <Right>
-inoremap <C-k> <Up>
+" Does not work :(
+"inoremap <C-h> <Left>
+"inoremap <C-j> <Down>
+"inoremap <C-l> <Right>
+"inoremap <C-k> <Up>
 
 " Emulate Folding https://vimhelp.org/fold.txt.html#fold-commands
 exmap togglefold obcommand editor:toggle-fold
@@ -27,9 +28,13 @@ nmap zM :foldall<CR>
 exmap toggleLeftSideBar obcommand app:toggle-left-sidebar
 nmap <C-n> :toggleLeftSideBar<CR>
 
+" Toggle right side bar
 exmap toggleRightSideBar obcommand app:toggle-right-sidebar
 nmap <C-,> :toggleRightSideBar<CR>
 
+" Focus the file explorer
+exmap focusFileExplorer obcommand file-explorer:open
+nmap <C-h> :focusFileExplorer<CR>
 
 " Open graph
 exmap openGraph obcommand graph:open
@@ -78,6 +83,15 @@ nmap <Space>t :editTitle<CR>
 " Delete file
 exmap deleteFile obcommand app:delete-file
 nmap <Space>d :deleteFile<CR>
+
+" Insert code block
+exmap insertCodeBlock obcommand editor:insert-codeblock
+nmap <Space>bc :insertCodeBlock<CR>
+
+" Insert math block
+exmap insertMathBlock obcommand editor:insert-mathblock
+nmap <Space>bm :insertMathBlock<CR>
+
 
 " Yank to system clipboard
 set clipboard=unnamedplus

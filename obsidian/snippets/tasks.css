@@ -1,0 +1,118 @@
+/* Priority as Checkbox Color and Remove the Emoji */
+.task-list-item[data-task-priority="highest"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-red);
+    border-color: var(--color-red);
+}
+
+.task-list-item[data-task-priority="high"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.task-list-item[data-task-priority="medium"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.task-list-item[data-task-priority="low"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-green);
+    border-color: var(--color-green);
+}
+
+.task-list-item[data-task-priority="lowest"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-blue);
+    border-color: var(--color-blue);
+}
+
+span.task-priority {
+    display: none;
+}
+
+input[type=checkbox]:checked {
+    box-shadow: none !important;
+    border-color: var(--checkbox-border-color) !important;
+}
+
+/* Change the Position of Elements */
+
+.markdown-preview-view .task-list-item-checkbox {
+    margin-right: 6px;
+}
+
+/* Allow .tasks-list-text to shrink and take up remaining space responsively in the task view only */
+
+.plugin-tasks-query-result li.task-list-item {
+    display: flex;
+}
+
+.plugin-tasks-query-result .tasks-list-text {
+    flex: 1;
+    display: inline-flex;
+}
+
+.plugin-tasks-query-result span.task-description {
+    flex: 2;
+}
+
+/* Show Only Emojis and Hover to Show Context */
+
+span.task-recurring,
+span.task-start,
+span.task-scheduled {
+    font-size: 1px;
+    letter-spacing: -1px;
+    color: transparent;
+    background-color: transparent;
+}
+
+span.task-recurring:after,
+span.task-start:after,
+span.task-scheduled:after {
+    letter-spacing: 0px;
+    font-size: var(--font-adaptive-normal);
+    line-height: var(--line-height);
+    color: var(--tx1);
+    margin-left: 5px;
+}
+
+span.task-recurring:after {
+    content: "🔁";
+}
+
+span.task-start:after {
+    content: "🛫";
+}
+
+span.task-scheduled:after {
+    content: "⏳";
+}
+
+span.task-recurring:hover:after,
+span.task-start:hover:after,
+span.task-scheduled:hover:after {
+    content: "";
+}
+
+span.task-recurring:hover,
+span.task-start:hover,
+span.task-scheduled:hover {
+    letter-spacing: 0px;
+    font-size: var(--font-adaptive-normal);
+    line-height: var(--line-height);
+    color: var(--tx1); /* Change to "var(--text-normal) for other themes" */
+    margin-left: 5px;
+}
+
+/* Move the Due Date to the Right */
+
+span.task-due {
+    width: fit-content;
+    margin-left: 5px;
+    order: 5;
+    font-weight: var(--bold-weight);
+}
+
+/* Center the text */
+.task-list-item {
+    align-items: center;
+}

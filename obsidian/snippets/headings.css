@@ -1,38 +1,54 @@
 :root {
-    --neutral-red_x: 204, 36, 29; /* #cc241d */
-    --neutral-red: rgb(var(--neutral-red_x));
-    --neutral-green_x: 152, 151, 26; /* #98971a */
-    --neutral-green: rgb(var(--neutral-green_x));
-    --neutral-yellow_x: 215, 153, 33; /* #d79921 */
-    --neutral-yellow: rgb(var(--neutral-yellow_x));
-    --neutral-blue_x: 69, 133, 136; /* #458588 */
-    --neutral-blue: rgb(var(--neutral-blue_x));
-    --neutral-purple_x: 177, 98, 134; /* #b16286 */
-    --neutral-purple: rgb(var(--neutral-purple_x));
-    --neutral-aqua_x: 104, 157, 106; /* #689d6a */
-    --neutral-aqua: rgb(var(--neutral-aqua_x));
-    --neutral-orange_x: 214, 93, 14; /* #d65d0e */
-    --neutral-orange: rgb(var(--neutral-orange_x));
+    /* Basic colors */
+    --white1: #ffffff;
+    --white2: #efefef;
+    --white3: #d7d7d7;
+    --white4: #bfbfbf;
+    --white5: #a7a7a7;
+    --white6: #8f8f8f;
+
+    --black: #000000;
+
+    --neutral-red: #cc241d
+    --neutral-green: #98971a;
+    --neutral-yellow: #d79921;
+    --neutral-blue: #458588;
+    --neutral-purple: #b16286;
+    --neutral-aqua: #689d6a;
+    --neutral-orange: #d65d0e;
 }
 
-.theme-dark {
-    --h1-color: var(--neutral-red);
-    --h2-color: var(--neutral-yellow);
-    --h3-color: var(--neutral-green);
-    --h4-color: var(--neutral-purple);
-    --h5-color: var(--neutral-blue);
-    --h6-color: var(--neutral-aqua);
+/* .theme-dark { */
+    /* --h1-color: var(--neutral-red); */
+    /* --h2-color: var(--neutral-yellow); */
+    /* --h3-color: var(--neutral-green); */
+    /* --h4-color: var(--neutral-purple); */
+    /* --h5-color: var(--neutral-blue); */
+    /* --h6-color: var(--neutral-aqua); */
 
-    --h1-size: 36px;
-    --h2-size: 32px;
-    --h3-size: 28px;
-    --h4-size: 26px;
-    --h5-size: 24px;
-    /* --h6-size: 28px; */ /* h6 size is not changed, i think it automatically is the text font size, maybe cause of gruvbox dark theme */
-}
+    /* --h1-color: var(--white1); */
+    /* --h2-color: var(--white2); */
+    /* --h3-color: var(--white3); */
+    /* --h4-color: var(--white4); */
+    /* --h5-color: var(--white5); */
+    /* --h6-color: var(--white6); */
+
+    /* 36px is 2.25rem */
+    /* 32px is 2rem */
+    /* 28px is 1.75rem */
+    /* 26px is 1.625rem *
+    /* 24px is 1.5rem */
+
+    /* --h1-size: 36px;  */
+    /* --h2-size: 32px;  */
+    /* --h3-size: 28px;  */
+    /* --h4-size: 26px;  */
+    /* --h5-size: 24px;  */
+    /* --h6-size: 22px; */
+/* } */
 
 /* All headings selector */
 .cm-s-obsidian .cm-line.HyperMD-header {
-    padding-top: 0.8rem;
+    padding-top: 0.6rem;
     padding-bottom: 0.4rem;
 }
