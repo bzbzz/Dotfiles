@@ -82,7 +82,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-completions
-  z
+  # z Now using zoxide directly instead of the plugin, mainly for Yazi
   fzf-tab
 )
 
@@ -127,6 +127,7 @@ alias cat='bat'
 # Shell integrations
 eval $(thefuck --alias)
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
