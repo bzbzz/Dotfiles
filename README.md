@@ -16,9 +16,13 @@ ln -sfn "dot/nvim" "$HOME/.config/nvim"
 
 # Symlink Kitty config
 ln -sfn "dot/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+ln -sfn "~/dot/kitty/flexoki.conf" "$HOME/.config/kitty"
 
 # Symlink zsh config
 ln -sfn "dot/.zshrc" "$HOME/.zshrc"
+
+# Symlink tmux config
+ln -sfn "~/dot/tmux/.tmux.conf" "~/.tmux.conf"
 
 # Symlink obsidian vimrc and snippets
 ln -sfn "dot/obsidian/obsidian.vimrc" "$HOME/obs/Vault/99 - Meta/obsidian.vimrc"
