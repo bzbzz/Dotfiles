@@ -157,3 +157,32 @@ setopt hist_find_no_dups
 
 # Solves pressing delete adds a space instead of del when using kitty over ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
+# TMUX
+# Interactive session selector
+ts() {
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --prompt="Select session: " --height=40% --reverse)
+    if [ -n "$session" ]; then
+        tmux attach -t "$session"
+    fi
+}
+
+# Create new session (zsh version)
+tn() {
+    echo -n "Session name: "
+    read session_name
+    if [ -n "$session_name" ]; then
+        tmux new -s "$session_name"
+    fi
+}
+
+# Delete session
+td() {
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --prompt="Delete session: " --height=40% --reverse)
+    if [ -n "$session" ]; then
+        tmux kill-session -t "$session"
+        echo "Deleted session: $session"
+    fi
+}
