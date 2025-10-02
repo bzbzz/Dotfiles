@@ -1,7 +1,4 @@
 # Dotfiles
-## Informations
-
-My Neovim, Kitty, zsh and Obsidian configurations files
 
 ## Setup
 
