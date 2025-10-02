@@ -61,7 +61,11 @@ return {
 
 	{
 		"rcarriga/nvim-notify",
-		opts = {},
+		opts = {
+            stages = 'static',
+            timeout = 2000,
+            focusable = false,
+        },
 	},
 	{
 		"folke/trouble.nvim",
