@@ -1,7 +1,7 @@
 return {
 	model = "claude-sonnet-4",
 	temperature = 0.1, -- Lower = focused, higher = creative
-	sticky = { "#buffers" },
+	sticky = { "#buffer" },
 
 
 	mappings = {

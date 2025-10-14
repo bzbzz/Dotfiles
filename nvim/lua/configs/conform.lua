@@ -9,8 +9,8 @@ local options = {
 		js = { "prettier" },
 		jsx = { "prettier" },
         json = { "prettier" },
-		php = { "php-cs-fixer" },
-		python = { "black" },
+		-- php = { "php-cs-fixer" },
+		-- python = { "black" },
 	},
 
 	-- format_on_save = {

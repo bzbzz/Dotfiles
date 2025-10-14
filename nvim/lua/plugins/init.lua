@@ -5,6 +5,13 @@ return {
 		opts = require("configs.conform"),
 	},
 
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		cmd = "Telescope",
+		opts = require("configs.telescope"),
+	},
+
 	-- These are some examples, uncomment them if you want to see them work!
 	{
 		"neovim/nvim-lspconfig",
@@ -35,18 +42,18 @@ return {
 		cmd = "CopilotChat",
 	},
 
-	{
-		"sphamba/smear-cursor.nvim",
-		event = "VimEnter",
-		opts = {},
-	},
+	-- {
+	-- 	"sphamba/smear-cursor.nvim",
+	-- 	event = "VimEnter",
+	-- 	opts = {},
+	-- },
 
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
-		opts = require("configs.render-markdown"),
-		lazy = false,
-	},
+	-- {
+	-- 	"MeanderingProgrammer/render-markdown.nvim",
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+	-- 	opts = require("configs.render-markdown"),
+	-- 	lazy = false,
+	-- },
 
 	{
 		"folke/flash.nvim",
