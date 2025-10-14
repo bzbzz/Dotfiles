@@ -119,13 +119,14 @@ fi
 
 # Aliases
 alias dot='cd ~/dot && nvim'
-alias vau='cd ~/Vault/Vault/ && nvim 00\ -\ Maps\ of\ content/ToDo.md'
-alias ls='eza'
+alias ls='eza --icons --tree --level=1 --sort=extension'
 alias vim='nvim'
+alias v='nvim'
 alias cat='bat'
+alias c='clear'
+alias e='exit'
 
 # Shell integrations
-eval $(thefuck --alias)
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
