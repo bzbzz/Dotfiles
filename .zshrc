@@ -120,11 +120,13 @@ fi
 # Aliases
 alias dot='cd ~/dot && nvim'
 alias ls='eza --icons --tree --level=1 --sort=extension'
+alias l='eza --icons --tree --level=1 --sort=extension'
+alias cat='bat'
 alias vim='nvim'
 alias v='nvim'
-alias cat='bat'
 alias c='clear'
 alias e='exit'
+alias sd='sudo !!'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -160,6 +162,17 @@ setopt hist_find_no_dups
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # TMUX
+# Shows which session I'm currently in
+tm() {
+    if [ -n "$TMUX" ]; then
+        echo "session: $(tmux display-message -p '#S')"
+    else
+        echo "None"
+        # echo "Not in tmux (but these sessions exist:)"
+        # tmux ls 2>/dev/null || echo "No sessions running"
+    fi
+}
+
 # Interactive session selector
 ts() {
     local session
