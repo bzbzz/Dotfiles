@@ -1,7 +1,7 @@
 # Creating .config if it does not exist
 mkdir -p "$HOME/.config"
 
-mv $HOME/Dotfiles $HOME/dot
+mv "$HOME/Dotfiles" "$HOME/dot"
 
 # Set prefix variable
 prefix="$HOME/dot"
@@ -38,8 +38,10 @@ ln -sfn "$prefix/kitty" "$HOME/.config/kitty"
 
 
 # Symlink tmux config
-ln -sfn "$prefix/tmux/.tmux.conf" "~/.tmux.conf"
+ln -sfn "$prefix/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # Symlink obsidian vimrc and snippets
-ln -sfn "$prefix/obsidian/obsidian.vimrc" "$HOME/obs/Vault/99 - Meta/obsidian.vimrc"
-ln -sfn "$prefix/obsidian/snippets" "$HOME/obs/Vault/.obsidian/snippets"
+mkdir -p "$HOME/obs/Vault/99 - Meta"
+mkdir -p "$HOME/obs/Vault/.obsidian"
+ln -sfn "$prefix/obsidian/obsidian.vimrc" "$HOME/obs/Hive/99 - Meta/obsidian.vimrc"
+ln -sfn "$prefix/obsidian/snippets" "$HOME/obs/Hive/.obsidian/snippets"
