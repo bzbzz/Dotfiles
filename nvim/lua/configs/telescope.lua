@@ -6,4 +6,9 @@ return {
 			"package%-lock%.json", -- escaped hyphen and dots
 		},
 	},
+    pickers = {
+        find_files = {
+            hidden = true,  -- Show hidden files
+        },
+    },
 }
