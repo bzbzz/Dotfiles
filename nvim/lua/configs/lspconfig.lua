@@ -1,7 +1,7 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "cssls", "clangd", "ts_ls", "pyright", "jdtls", "intelephense" }
+local servers = { "rust-analyzer", "vtsls", "cssls", "clangd",  "pyright", "jdtls" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers
