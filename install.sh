@@ -45,3 +45,6 @@ mkdir -p "$HOME/obs/Vault/99 - Meta"
 mkdir -p "$HOME/obs/Vault/.obsidian"
 ln -sfn "$prefix/obsidian/obsidian.vimrc" "$HOME/obs/Hive/99 - Meta/obsidian.vimrc"
 ln -sfn "$prefix/obsidian/snippets" "$HOME/obs/Hive/.obsidian/snippets"
+
+# Symlink pandoc filters
+ln -sfn "$prefix/.pandoc" "$HOME/.pandoc"
