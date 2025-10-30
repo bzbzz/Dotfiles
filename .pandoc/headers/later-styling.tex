@@ -1,0 +1,25 @@
+\usepackage{xcolor}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{240,240,240}
+\definecolor{inlinecodecolor}{RGB}{240,240,240}
+\setlength{\FrameSep}{10pt}
+\let\oldShaded\Shaded
+\let\endoldShaded\endShaded
+\renewenvironment{Shaded}{%
+  \vspace{1em}%
+  \begin{snugshade}%
+}{%
+  \end{snugshade}%
+  \vspace{1em}%
+}
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{%
+  \colorbox{inlinecodecolor}{\oldtexttt{\,#1\,}}%
+}
+\usepackage{csquotes}
+\renewenvironment{quote}{%
+    \list{}{\leftmargin=2em\rightmargin=2em}%
+    \item\relax\itshape
+}{%
+    \endlist
+}
