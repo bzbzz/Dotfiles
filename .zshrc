@@ -127,7 +127,7 @@ alias v='nvim'
 alias c='clear'
 alias e='exit'
 alias sd='sudo !!'
-alias mdpdf='pandoc -f markdown+hard_line_breaks -V geometry:margin=1in -V block-headings --lua-filter=header-line.lua -o output.pdf'
+alias mdpdf='pandoc -f markdown+hard_line_breaks -V geometry:margin=1in -V block-headings -H ~/.pandoc/headers/later-styling.tex --lua-filter=header-line.lua -o output.pdf'
 
 # Shell integrations
 eval "$(fzf --zsh)"
