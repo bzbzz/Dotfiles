@@ -1,8 +1,17 @@
 \usepackage{xcolor}
 \usepackage{framed}
+\usepackage{inconsolata}
 \definecolor{shadecolor}{RGB}{240,240,240}
 \definecolor{inlinecodecolor}{RGB}{240,240,240}
 \setlength{\FrameSep}{10pt}
+
+% Define Shaded if it doesn't exist, then customize it
+\makeatletter
+\@ifundefined{Shaded}{%
+  \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}%
+}{}
+\makeatother
+
 \let\oldShaded\Shaded
 \let\endoldShaded\endShaded
 \renewenvironment{Shaded}{%
@@ -12,6 +21,7 @@
   \end{snugshade}%
   \vspace{1em}%
 }
+
 \let\oldtexttt\texttt
 \renewcommand{\texttt}[1]{%
   \colorbox{inlinecodecolor}{\oldtexttt{\,#1\,}}%
