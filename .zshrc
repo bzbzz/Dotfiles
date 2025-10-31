@@ -119,6 +119,7 @@ fi
 
 # Aliases
 alias dot='cd ~/dot && nvim'
+alias hive='cd ~/obs/Hive && nvim'
 alias ls='eza --icons --tree --level=1 --sort=extension'
 alias l='eza --icons --tree --level=1 --sort=extension'
 alias cat='bat'
@@ -128,6 +129,7 @@ alias c='clear'
 alias e='exit'
 alias sd='sudo !!'
 alias mdpdf='pandoc -f markdown+hard_line_breaks -V geometry:margin=1in -V block-headings -H ~/.pandoc/headers/later-styling.tex --lua-filter=header-line.lua -o output.pdf'
+alias lz='lazygit'
 
 # Shell integrations
 eval "$(fzf --zsh)"
