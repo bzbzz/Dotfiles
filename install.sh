@@ -48,3 +48,7 @@ ln -sfn "$prefix/obsidian/snippets" "$HOME/obs/Hive/.obsidian/snippets"
 
 # Symlink pandoc filters
 ln -sfn "$prefix/.pandoc" "$HOME/.pandoc"
+
+# Install pandoc + LaTeX, commented cause full LaTeX is heavy
+# sudo dnf install pandoc
+# sudo dnf install texlive-scheme-full
