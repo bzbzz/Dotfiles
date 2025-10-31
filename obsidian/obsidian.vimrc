@@ -7,6 +7,9 @@ unmap <Space>
 noremap j gj
 noremap k gk
 
+" map jj to escape in insert mode   
+inoremap jj <Esc>
+
 " TODO: need to fix the pasting to also include c-c
 noremap <Space>p "0p
 
