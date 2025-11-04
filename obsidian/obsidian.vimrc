@@ -19,6 +19,15 @@ noremap <Space>p "0p
 "inoremap <C-l> <Right>
 "inoremap <C-k> <Up>
 
+" little trick :)
+inoremap <C-h> <Esc>i
+inoremap <C-j> <Esc>ji
+inoremap <C-k> <Esc>ki
+"inoremap <C-l> <Esc>li
+
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+
 " ----------------------------------------------------------------------------
 " Folding Commands
 " https://vimhelp.org/fold.txt.html#fold-commands
@@ -57,6 +66,26 @@ nmap <Space>bc :insertCodeBlock<CR>
 " Insert math block
 exmap insertMathBlock obcommand editor:insert-mathblock
 nmap <Space>bm :insertMathBlock<CR>
+
+" Toggle inline code (turn word into code when on word)
+exmap toggleCode obcommand editor:toggle-code
+nmap <Space>è :toggleCode<CR>
+
+" Toggle inline math (turn expression into math when on word)
+exmap toggleMath obcommand editor:toggle-inline-math
+nmap <Space>$ :toggleMath<CR>
+
+" Toggle bold (turn word into bold when on word)
+exmap toggleBold obcommand editor:toggle-bold
+nmap <Space>* :toggleBold<CR>
+
+" Toggle italic (turn word into italic when on word)
+exmap toggleItalic obcommand editor:toggle-italics
+nmap <Space>µ :toggleItalic<CR>
+
+" Toggle strikethrough (turn word into strikethrough when on word)
+exmap toggleStrikethrough obcommand editor:toggle-strikethrough
+nmap <Space>~ :toggleStrikethrough<CR>
 
 " Toggle spell check
 exmap toggleSpellcheck obcommand editor:toggle-spellcheck
@@ -121,8 +150,6 @@ nmap <Space>t :editTitle<CR>
 " Delete file
 exmap deleteFile obcommand app:delete-file
 nmap <Space>d :deleteFile<CR>
-
-
 
 " Yank to system clipboard
 set clipboard=unnamedplus
