@@ -42,11 +42,11 @@ return {
 		cmd = "CopilotChat",
 	},
 
-	-- {
-	-- 	"sphamba/smear-cursor.nvim",
-	-- 	event = "VimEnter",
-	-- 	opts = {},
-	-- },
+	{
+		"sphamba/smear-cursor.nvim",
+		event = "VimEnter",
+		opts = {},
+	},
 
 	-- {
 	-- 	"MeanderingProgrammer/render-markdown.nvim",

@@ -147,6 +147,14 @@ nmap L :navigateForward<CR>
 exmap openLeaf obcommand editor:open-link-in-new-leaf
 nmap gf :openLeaf<CR>
 
+" Go back tab
+exmap goBack obcommand app:go-back
+nmap H :goBack<CR>
+
+" Go forward tab
+exmap goForward obcommand app:go-forward
+nmap L :goForward<CR>
+
 " ----------------------------------------------------------------------------
 " File Editing
 " ----------------------------------------------------------------------------
