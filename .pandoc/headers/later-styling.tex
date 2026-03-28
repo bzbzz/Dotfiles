@@ -22,6 +22,9 @@
   \vspace{1em}%
 }
 
+\renewcommand{\ttfamily}{\fontfamily{zi4}\fontsize{9pt}{11pt}\selectfont}
+\usepackage{csquotes}
+
 \let\oldtexttt\texttt
 \renewcommand{\texttt}[1]{%
   \colorbox{inlinecodecolor}{\oldtexttt{\,#1\,}}%
