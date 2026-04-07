@@ -11,7 +11,8 @@ vim.g.copilot_no_tab_map = true -- disable TAB to accept copilot suggestions, ma
 vim.opt_local.conceallevel = 1 -- For Obsidian disabled checkboxes
 
 -- Blinking caret in terminal
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175,t:ver25-blinkwait700-blinkoff400-blinkon250"
+-- vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175,t:ver25-blinkwait700-blinkoff400-blinkon250"
+vim.opt.guicursor = "n-v-c:block-blinkon0,i-ci-ve:ver25-blinkon0,r-cr:hor20-blinkon0,o:hor50-blinkon0,sm:block-blinkon0,t:ver25-blinkon0"
 
 local o = vim.o
 o.clipboard = "unnamedplus"
