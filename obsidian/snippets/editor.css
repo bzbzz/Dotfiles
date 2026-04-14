@@ -1,7 +1,7 @@
 /* Gives more space to the text in editor mode and centers it */
 .markdown-source-view,
 .markdown-preview-view {
-    max-width: 60vw;
+    max-width: 55vw;
     margin: auto; 
 }
 
@@ -26,4 +26,10 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 /* Hide the three dots after a folded heading */
 .cm-foldPlaceholder {
     display: none;
+}
+
+/* Makes text inbetween backticks ` ` red */
+.markdown-rendered code,
+.markdown-source-view.mod-cm6 .cm-inline-code {
+    color: #AF3029
 }
