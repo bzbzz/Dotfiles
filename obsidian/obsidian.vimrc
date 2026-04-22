@@ -129,11 +129,11 @@ nmap <Space>x :closeTab<CR>
 
 " Go to next tab
 exmap nextTab obcommand workspace:next-tab
-nmap J :nextTab<CR>
+nmap <Tab> :nextTab<CR>
 
 " Go to previous tab
 exmap previousTab obcommand workspace:previous-tab
-nmap K :previousTab<CR>
+nmap <S-Tab> :previousTab<CR>
 
 " Open link in new tab
 exmap openLeaf obcommand editor:open-link-in-new-leaf
