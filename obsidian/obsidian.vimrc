@@ -96,7 +96,7 @@ nmap <Space>sc :toggleSpellcheck<CR>
 " ----------------------------------------------------------------------------
 
 " Open file explorer
-exmap telescope obcommand switcher:open
+exmap telescope obcommand darlal-switcher-plus:switcher-plus:open
 nmap <Space>ff :telescope<CR>
 
 " Open omnisearch all files
@@ -153,3 +153,28 @@ nmap <Space>d :deleteFile<CR>
 
 " Yank to system clipboard
 set clipboard=unnamedplus
+
+" ----------------------------------------------------------------------------
+" Headings
+" ----------------------------------------------------------------------------
+
+exmap setHeading0 obcommand editor:set-heading-0
+nmap <Space>h² :setHeading0<CR>
+
+exmap setHeading1 obcommand editor:set-heading-1
+nmap <Space>h& :setHeading1<CR>
+
+exmap setHeading2 obcommand editor:set-heading-2
+nmap <Space>hé :setHeading2<CR>
+
+exmap setHeading3 obcommand editor:set-heading-3
+nmap <Space>h" :setHeading3<CR>
+
+exmap setHeading4 obcommand editor:set-heading-4
+nmap <Space>h' :setHeading4<CR>
+
+exmap setHeading5 obcommand editor:set-heading-5
+nmap <Space>h( :setHeading5<CR>
+
+exmap setHeading6 obcommand editor:set-heading-6
+nmap <Space>h- :setHeading6<CR>
