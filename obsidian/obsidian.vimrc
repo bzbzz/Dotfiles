@@ -127,13 +127,21 @@ nmap <Space>og :openGraph<CR>
 exmap closeTab obcommand workspace:close
 nmap <Space>x :closeTab<CR>
 
-" Go to next tab
+" Go to tab n+1
 exmap nextTab obcommand workspace:next-tab
 nmap <Tab> :nextTab<CR>
 
-" Go to previous tab
+" Go to tab n-1
 exmap previousTab obcommand workspace:previous-tab
 nmap <S-Tab> :previousTab<CR>
+
+" Go to previous tab, navigate back in timeline
+exmap navigateBack obcommand app:go-back
+nmap H :navigateBack<CR>
+
+" Go to next tab, navigate forward in timeline
+exmap navigateForward obcommand app:go-forward
+nmap L :navigateForward<CR>
 
 " Open link in new tab
 exmap openLeaf obcommand editor:open-link-in-new-leaf
