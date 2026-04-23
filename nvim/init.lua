@@ -47,7 +47,7 @@ require "options"
 require "nvchad.autocmds"
 vim.notify = require("notify") -- Make nvim.notify the default notifier
 -- requiring my own little add-ons
-require("discipline").cowboy() -- based on craftzdog, hjkl bw are limited
+-- require("discipline").cowboy() -- based on craftzdog, hjkl bw are limited
 require("macroNotify").setup() -- notify when recording macros
 
 vim.schedule(function()
