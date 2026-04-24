@@ -1,6 +1,4 @@
 /* Change bullet points to dashes in Obsidian - Working Solution */
-/* Credit: dawni on Obsidian Forum (June 2025) */
-
 .list-bullet::after {
     display: none;
 }
@@ -9,4 +7,9 @@
 .markdown-reading-view ul.has-list-bullet li::marker {
     color: var(--list-marker-color);
     content: "- ";
+}
+
+/* Change checklist to squares cause minimal theme makes them round */
+input[type="checkbox"] {
+    border-radius: 6px !important;
 }
