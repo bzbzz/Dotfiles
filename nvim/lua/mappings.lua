@@ -1,6 +1,5 @@
 require("nvchad.mappings")
 
-
 local map = vim.keymap.set
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -30,7 +29,13 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true }) -- move
 
 map("n", "<A-w>", ":bd!<Cr>", { noremap = true, silent = true }) -- close buffer
 
-map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" }) -- Open code action
+-- fastaction plugin
+vim.keymap.set(
+	{ "n", "x" },
+	"<leader>a",
+	'<cmd>lua require("fastaction").code_action()<CR>',
+	{ desc = "Display code actions", buffer = bufnr }
+)
 
 map("n", "<leader>co", ":CopilotChat<Cr>", { noremap = true, silent = true }) -- Open Copilot chat
 map("n", "<leader>cs", ":Copilot status<Cr>", { noremap = true, silent = true }) -- Show Copilot status / activate
