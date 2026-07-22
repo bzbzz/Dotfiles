@@ -161,6 +161,12 @@ setopt hist_find_no_dups
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Solves clear not deleting the text anymore
+clear() {
+  command clear
+  printf '\e[3J'
+}
+
 # Solves pressing delete adds a space instead of del when using kitty over ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
