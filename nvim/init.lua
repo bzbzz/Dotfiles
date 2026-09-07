@@ -41,7 +41,6 @@ vim.api.nvim_create_autocmd("UILeave", {
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
-dofile(vim.g.base46_cache .. "render-markdown")
 
 require "options"
 require "nvchad.autocmds"
