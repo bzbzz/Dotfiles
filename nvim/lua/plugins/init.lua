@@ -26,12 +26,6 @@ return {
 	},
 
 	{
-		"junegunn/fzf.vim",
-		dependencies = { "junegunn/fzf" },
-		lazy = false,
-	},
-
-	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
 			{ "github/copilot.vim" },
@@ -42,11 +36,11 @@ return {
 		cmd = "CopilotChat",
 	},
 
-	-- {
-	-- 	"sphamba/smear-cursor.nvim",
-	-- 	event = "VimEnter",
-	-- 	opts = {},
-	-- },
+	{
+		"sphamba/smear-cursor.nvim",
+		event = "VimEnter",
+		opts = {},
+	},
 
 	{
 		"folke/flash.nvim",
