@@ -209,3 +209,4 @@ td() {
         echo "Deleted session: $session"
     fi
 }
+export PATH="$HOME/.local/bin:$PATH"
