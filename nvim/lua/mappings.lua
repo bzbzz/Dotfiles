@@ -44,7 +44,6 @@ map("n", "<leader>cd", ":Copilot disable<Cr>", { noremap = true, silent = true }
 map("i", "<C-y>", 'copilot#Accept("<CR>")', { silent = true, expr = true, noremap = true, replace_keycodes = false }) -- Accept Copilot suggestion
 
 map("n", "<leader>gg", ":Telescope live_grep<Cr>", { noremap = true, silent = true }) -- Search in project with Telescope
-map("n", "<leader>no", ":Telescope notify<Cr>", { noremap = true, silent = true }) -- Telescope notify history
 map("n", "<leader>jj", ":Telescope jumplist<Cr>", { noremap = true, silent = true }) -- Telescope jumplist
 map("n", "<leader>fd", ":Telescope current_buffer_fuzzy_find<Cr>", { noremap = true, silent = true }) -- Telescope current buffer fuzzy find
 

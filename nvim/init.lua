@@ -42,9 +42,13 @@ vim.api.nvim_create_autocmd("UILeave", {
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
+-- enable the new ui2, in pcall because it will probably get it's name changed from _core to core
+pcall(function()
+	require("vim._core.ui2").enable { enable = true }
+end)
+
 require "options"
 require "nvchad.autocmds"
-vim.notify = require("notify") -- Make nvim.notify the default notifier
 -- requiring my own little add-ons
 -- require("discipline").cowboy() -- based on craftzdog, hjkl bw are limited
 require("macroNotify").setup() -- notify when recording macros

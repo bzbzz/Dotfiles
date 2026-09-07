@@ -22,7 +22,7 @@ return {
 
 	{
 		"github/copilot.vim",
-		cmd = "Copilot",
+		event = "InsertEnter",
 	},
 
 	{
@@ -51,15 +51,6 @@ return {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
             { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
         },
-	},
-
-	{
-		"rcarriga/nvim-notify",
-		opts = {
-			stages = "static",
-			timeout = 2000,
-			focusable = false,
-		},
 	},
 	{
 		"folke/trouble.nvim",
