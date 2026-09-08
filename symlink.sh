@@ -23,9 +23,15 @@ ok "Directories ready"
 
 # Symlinks
 
+warn() { echo -e "\e[33m[WARN]\e[0m  $*"; }
+
 link() {
-    local src="$1"
-    local dest="$2"
+    local src="$1" dest="$2"
+    [[ -e "$src" ]] || warn "source missing: $src"
+    if [[ -e "$dest" && ! -L "$dest" ]]; then
+        warn "$dest exists and is not a symlink : skipping"
+        return
+    fi
     ln -sfn "$src" "$dest"
     ok "$dest  →  $src"
 }
@@ -39,6 +45,14 @@ link "$DOT/tmux/.tmux.conf"         "$HOME/.tmux.conf"
 link "$DOT/obsidian/obsidian.vimrc" "$HOME/obs/Hive/99 - Meta/obsidian.vimrc"
 link "$DOT/obsidian/snippets"       "$HOME/obs/Hive/.obsidian/snippets"
 link "$DOT/.pandoc"                 "$HOME/.pandoc"
+
+info "Checking for dangling symlinks..."
+dangling=$(find "$HOME/.config" "$HOME/obs" -maxdepth 2 -xtype l 2>/dev/null)
+if [[ -n "$dangling" ]]; then
+    echo "$dangling" | while read -r l; do warn "dangling: $l"; done
+else
+    ok "No dangling symlinks"
+fi
 
 # Done
 echo ""
