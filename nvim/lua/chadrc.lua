@@ -5,8 +5,11 @@
 ---@type ChadrcConfig
 local M = {}
 
+local dark = vim.fn.system("gsettings get org.gnome.desktop.interface color-scheme"):match("dark")
+
 M.base46 = {
-	theme = "flexoki",
+	theme = dark and "flexoki" or "flexoki-light",
+
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
