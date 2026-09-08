@@ -1,7 +1,7 @@
 # Dotfiles
 
 Personal dotfiles for Fedora.  
-Configs for neovim, kitty, zsh, tmux, obsidian, and pandoc.  
+Configs for neovim, kitty, zsh, gnome, tmux, obsidian, and pandoc.  
 
 ## Setup
 
