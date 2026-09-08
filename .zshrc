@@ -72,18 +72,22 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+ZVM_INIT_MODE=sourcing
+# ZVM_VI_INSERT_ESCAPE_BINDKEY=jk   # if one day I want to escape with a double movement key pattern
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  zsh-vi-mode
   git
   zsh-autosuggestions
-  zsh-syntax-highlighting
   zsh-completions
   # z Now using zoxide directly instead of the plugin, mainly for Yazi
   fzf-tab
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
