@@ -73,6 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 ZVM_INIT_MODE=sourcing
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 # ZVM_VI_INSERT_ESCAPE_BINDKEY=jk   # if one day I want to escape with a double movement key pattern
 
 # Which plugins would you like to load?
