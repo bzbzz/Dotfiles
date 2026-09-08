@@ -65,13 +65,6 @@ for _, key in ipairs { "<Up>", "<Down>", "<Left>", "<Right>" } do
 	map({ "v", "i" }, key, "<Nop>", { silent = true, desc = "Disabled — use hjkl" })
 end
 
--- ┌──────────────────────────────────────────────────────────────────────────┐
--- │  LSP                                                                     │
--- └──────────────────────────────────────────────────────────────────────────┘
-
-map({ "n", "x" }, "<leader>a", function()
-	require("fastaction").code_action()
-end, { desc = "Code actions (fastaction)" })
 
 -- ┌──────────────────────────────────────────────────────────────────────────┐
 -- │  COPILOT                                                                 │
