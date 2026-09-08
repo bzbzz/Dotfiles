@@ -54,6 +54,10 @@ else
     ok "No dangling symlinks"
 fi
 
+info "GNOME shortcuts are not symlinked (dconf is a binary DB)."
+info "To import them:  dconf load /org/gnome/settings-daemon/plugins/media-keys/ < $DOT/gnome/media-keys.dconf"
+info "note: bzbzz is hardcoded somewhere in that file, replace it"
+
 # Done
 echo ""
 echo -e "\e[32m══════════════════════════════════════════════\e[0m"

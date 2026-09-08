@@ -1,0 +1,27 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+help=@as []
+screen-brightness-down=['F4']
+screen-brightness-up=['Super+F11']
+volume-down=['<Super>F9']
+volume-up=['<Super>F10']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='kitty'
+name='Open kitty'
+
+[custom-keybindings/custom1]
+binding='<Super>asterisk'
+command='flatpak run md.obsidian.Obsidian'
+name='Open Obsidian'
+
+[custom-keybindings/custom2]
+binding='<Super>BackSpace'
+command='flatpak run app.zen_browser.zen'
+name='Open Zen'
+
+[custom-keybindings/custom3]
+binding='<Super>t'
+command='/home/bzbzz/dot/bin/toggle-theme'
+name='Toggle theme'
