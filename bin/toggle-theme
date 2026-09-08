@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+key="org.gnome.desktop.interface color-scheme"
+if gsettings get $key | grep -q dark; then
+  gsettings set $key prefer-light
+else
+  gsettings set $key prefer-dark
+fi
+nvim --headless "+lua require('base46').load_all_highlights()" +qa 2>/dev/null
